@@ -13,7 +13,9 @@ const routes: Routes = [
     {path:'',component:HomeComponent},
     {path:'home',component:HomeComponent},
     {path:'usuario',component:UsuariosComponent},
-    {path:'reportes',component:ReportesComponent}
+    {path:'reportes',component:ReportesComponent},
+    {path:'crearUsuario',component:CrearUsuariosComponent}
+
   ]}
 
 ];

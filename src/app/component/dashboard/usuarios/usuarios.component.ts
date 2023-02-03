@@ -73,7 +73,7 @@ export class UsuariosComponent {
   })
 }
 crearUsuario(){
-  this.router.navigate(['crearUsuarios']);
+  this.router.navigate(['crearUsuario']);
 }
 
 }
