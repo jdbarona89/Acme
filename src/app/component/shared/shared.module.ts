@@ -23,6 +23,14 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 
+import { MatSelectModule } from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
+
+
+
+
 
 
 
@@ -43,7 +51,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatTooltipModule,
     MatPaginatorModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   exports:[
 
@@ -60,7 +71,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatTooltipModule,
     MatPaginatorModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 
   ]
 })
