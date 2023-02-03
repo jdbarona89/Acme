@@ -1,0 +1,16 @@
+[
+{
+"nombre":"Juan",
+"apellido":"Barona",
+"cargo":"Ingeniero de Sistemas",
+"fechaIngreso":"2022/01/06",
+"salario":"2800000"
+},
+{
+    "nombre":"Josue",
+    "apellido":"Londoño",
+    "cargo":"Ingeniero de Sistemas",
+    "fechaIngreso":"2022/01/06",
+    "salario":"1800000"
+    }
+]

@@ -1,0 +1,14 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .menu{
+
+    margin: auto;
+    text-align: center;
+
+  }
+
+  .icon{
+    margin-left: 300px;
+  }

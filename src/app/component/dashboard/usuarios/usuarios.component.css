@@ -1,0 +1,22 @@
+
+.table {
+
+    width:80%;
+    margin: auto;
+ }
+
+ .opcion{
+
+ background-color: #001ec5;
+ }
+ 
+ .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .filter{
+    width:80%;
+    margin: auto;
+    margin-top: 3em;
+  }

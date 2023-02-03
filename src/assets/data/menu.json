@@ -1,0 +1,24 @@
+[{
+
+    "nombre": "Dashboard",
+    "redirect": "home"
+
+
+},
+{
+
+    "nombre": "Usuarios",
+    "redirect": "usuario"
+
+
+}, {
+
+    "nombre": "Reportes",
+    "redirect": "reportes"
+
+
+}
+
+
+
+]
