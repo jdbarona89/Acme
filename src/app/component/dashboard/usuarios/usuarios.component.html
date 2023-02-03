@@ -1,8 +1,15 @@
 <div class="container">
     <div class="navbar">
         <mat-toolbar>
-            <span>Usuarios</span>
+            <span><div class="demo-section">
+               Usuarios
+                <mat-icon matBadge={{listUsuarios.length}} matBadgeColor="warn">groups</mat-icon>
+                  <!-- Include text description of the icon's meaning for screen-readers -->
+                  <span class="cdk-visually-hidden">
+                  </span>
+              </div></span>
             <button   style="margin-left:auto;" routerLink="/dashboard/crearUsuario"  mat-raised-button color="primary" >Nuevo Usuario</button>
+        
         </mat-toolbar>
     </div>
 
@@ -41,13 +48,13 @@
                     <th mat-header-cell *matHeaderCellDef></th>
                     <td mat-cell *matCellDef="let element; let i=index">
                         <button mat-button matTooltip="Ver Usuario">
-                            <mat-icon style="color: #092ee5;" aria-hidden="false" fontIcon="search"></mat-icon>
+                            <mat-icon class="opcion " aria-hidden="false" fontIcon="search"></mat-icon>
                         </button>
                         <button mat-button matTooltip="Editar Usuario">
-                            <mat-icon style="color: #092ee5;" aria-hidden="false" fontIcon="edit"></mat-icon>
+                            <mat-icon class="opcion " aria-hidden="false" fontIcon="edit"></mat-icon>
                         </button>
-                        <button (click)="eliminarUsuario(i)" matTooltip="Eliminar Usuario">
-                            <mat-icon style="color: #092ee5;" aria-hidden="false" fontIcon="delete"></mat-icon>
+                        <button  mat-button (click)="eliminarUsuario(i)" matTooltip="Eliminar Usuario">
+                            <mat-icon class="opcion " aria-hidden="false" fontIcon="delete"></mat-icon>
                         </button>
                     </td>
                 </ng-container>

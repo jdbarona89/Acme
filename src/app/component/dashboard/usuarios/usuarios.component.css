@@ -5,9 +5,9 @@
     margin: auto;
  }
 
- .opcion{
-
- background-color: #001ec5;
+ #opcion{
+  outline:none !important;
+  border: 0 !important;;
  }
  
  .mat-mdc-form-field {
