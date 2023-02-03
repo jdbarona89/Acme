@@ -4,43 +4,49 @@
     <mat-card>
 
         <mat-card-content>
-            <mat-grid-list cols="4" rowHeight="70px">
-                <mat-grid-tile [colspan]="1" [rowspan]="1">
-                    <mat-form-field class="ancho">
-                        <mat-label>Nombre</mat-label>
-                        <input matInput>
-                    </mat-form-field>
-                </mat-grid-tile>
-                <mat-grid-tile [colspan]="3" [rowspan]="6" [style.background]="'lightblue'">IMAG</mat-grid-tile>
-                <mat-grid-tile [colspan]="1" [rowspan]="1" >
-                    <mat-form-field class="ancho">
-                        <mat-label>Apellido</mat-label>
-                        <input matInput>
-                    </mat-form-field>
-                </mat-grid-tile>
-                <mat-grid-tile [colspan]="1" [rowspan]="1" >
-                    <mat-form-field class="ancho">
-                        <mat-label>Cargo</mat-label>
-                        <input matInput>
-                    </mat-form-field>
-                </mat-grid-tile>
-                <mat-grid-tile [colspan]="1" [rowspan]="1" >
-                    <mat-form-field class="ancho">
-                        <mat-label>Fecha Ingreso</mat-label>
-                        <input matInput>
-                    </mat-form-field>
-                </mat-grid-tile>
-                <mat-grid-tile [colspan]="1" [rowspan]="1" >
-                    <mat-form-field class="ancho">
-                        <mat-label>Salario</mat-label>
-                        <input matInput>
-                    </mat-form-field>
-                </mat-grid-tile>
-                <mat-grid-tile [colspan]="1" [rowspan]="1" >
-                    <button mat-raised-button>Volver</button>
-                    <button mat-raised-button color="primary">Registrar</button>
-                </mat-grid-tile>
-            </mat-grid-list>
+            <form [formGroup]="form" (submit)="agregarUsuario()">
+                <mat-grid-list cols="4" rowHeight="70px">
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+                        <mat-form-field class="ancho">
+                            <mat-label>Nombre</mat-label>
+                            <input matInput formControlName="nombre">
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="3" [rowspan]="6"><img src="./assets/img/usuario.png" width="250px"
+                            height="250px"></mat-grid-tile>
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+                        <mat-form-field class="ancho">
+                            <mat-label>Apellido</mat-label>
+                            <input matInput formControlName="apellido">
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+                        <mat-form-field class="ancho">
+                            <mat-label>Cargo</mat-label>
+                            <input matInput formControlName="cargo">
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+                        <mat-form-field class="ancho">
+                            <mat-label>Fecha Ingreso</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="fechaIngreso">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+                        <mat-form-field class="ancho">
+                            <mat-label>Salario</mat-label>
+                            <input  type="number"  matInput formControlName="salario">
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+                        <button mat-raised-button   (click)="volver()" style="margin-right: 20%;">Volver</button>
+                        <button type="submit"   mat-raised-button color="primary" [disabled]="form.invalid">Registrar</button>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </form>
         </mat-card-content>
     </mat-card>
 </div>

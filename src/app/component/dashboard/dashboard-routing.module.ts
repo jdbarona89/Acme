@@ -7,6 +7,7 @@ import { CrearUsuariosComponent } from './usuarios/crear-usuarios/crear-usuarios
 import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
+
 const routes: Routes = [
 
   {path:'',component:DashboardComponent, children:[
