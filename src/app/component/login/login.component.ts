@@ -12,6 +12,7 @@ export class LoginComponent {
 
   form: FormGroup;
   spinner:boolean=false;
+  hide = true;
 
   constructor(private fb: FormBuilder, private router: Router, private _snackBar: MatSnackBar) {
 

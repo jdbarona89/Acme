@@ -8,10 +8,23 @@
         <mat-label>Username</mat-label>
         <input matInput autocomplete="off" formControlName="usuario">
       </mat-form-field>
-      <mat-form-field class="width" appearance="fill">
+
+      <mat-form-field  class="width"  appearance="fill">
         <mat-label>Pass</mat-label>
-        <input type="password"   matInput autocomplete="off" formControlName="pass">
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="pass">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
       </mat-form-field>
+
+
+
+
+
+
+
+
+
       <button  type="submit"  class="width button" mat-raised-button color="primary" [disabled]="form.invalid">Login</button>
     </div>
   </form>
